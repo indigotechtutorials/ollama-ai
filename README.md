@@ -414,8 +414,9 @@ API Documentation: https://github.com/jmorganca/ollama/blob/main/docs/api.md#cre
 
 ```ruby
 result = client.create(
-  { name: 'mario',
-    modelfile: "FROM llama2\nSYSTEM You are mario from Super Mario Bros." }
+  { model: 'mario',
+    from: 'llama3.2',
+    system: 'You are mario from Super Mario Bros.' }
 ) do |event, raw|
   puts event
 end
